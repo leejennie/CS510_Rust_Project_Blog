@@ -23,7 +23,6 @@ impl Component for Dashboard {
 
     fn view(&self) -> Html {
         html! {
-
             <div class="dashboard">
                 <div class="main">{"WELCOME TO THE BEST RECIPE BLOG"}</div>   
                 <div class="quote">

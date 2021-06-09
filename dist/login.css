@@ -1,0 +1,23 @@
+.loginpage {
+    width: 340px;
+    margin: 50px auto;
+}
+.logincontainer {
+    margin-bottom: 15px;
+    background: #8a8b7d;
+    padding: 30px;
+}
+.h1 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+}
+.button {
+    align-content: center;
+} 
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+}
