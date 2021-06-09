@@ -1,53 +1,33 @@
-#![recursion_limit="256"]
+#![recursion_limit = "1024"]
 
-use yew::prelude::*;
+use yew::{html, Component, ComponentLink, Html}; 
 
-pub struct Dashboard {}
+pub mod pages;
 
-impl Component for Dashboard {
+mod routes;
+use routes::Navigation;
+
+struct App {}
+
+impl Component for App {
     type Message = ();
     type Properties = ();
 
-    fn create(_props: Self::Properties, _link: ComponentLink<Self>) -> Self {
-        Dashboard {} 
+    fn create(_: Self::Properties, _link: ComponentLink<Self>) -> Self {
+        App {}
     }
 
-    fn update(&mut self, _msg: Self::Message) -> ShouldRender {
-            unimplemented!()
-    }
-
-    fn change(&mut self, _props: Self::Properties) -> ShouldRender {
-        // Should only return "true" if new properties are different to
-        // previously received properties.
-        // This component has no properties so we will always return "false".
-        false
+    fn update(&mut self, _msg: Self::Message) -> bool {
+        unimplemented!()
     }
 
     fn view(&self) -> Html {
         html! {
-            <nav class="navbar navbar-expand-lg navbar-dark bg-danger mb-5">
-            <a class="navbar-brand"> {"RECIPE BLOG"} </a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link">{ "Home" }<span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">{ "Statistics" }</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link"> { "Sign Up" } </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link"> { "Log In" } </a>
-                </li>
-              </ul>
-            </div>
-            </nav>
+            <Navigation />
         }
     }
 }
 
 fn main() {
-    yew::start_app::<Dashboard>();
+    yew::start_app::<Navigation>();
 }
