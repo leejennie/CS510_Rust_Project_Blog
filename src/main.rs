@@ -1,6 +1,7 @@
 #![recursion_limit = "1024"]
 
 use yew::{html, Component, ComponentLink, Html}; 
+use yew::*;
 
 pub mod pages;
 
@@ -19,6 +20,13 @@ impl Component for App {
 
     fn update(&mut self, _msg: Self::Message) -> bool {
         unimplemented!()
+    }
+
+    fn change(&mut self, _props: Self::Properties) -> ShouldRender {
+        // Should only return "true" if new properties are different to
+        // previously received properties.
+        // This component has no properties so we will always return "false".
+        false
     }
 
     fn view(&self) -> Html {

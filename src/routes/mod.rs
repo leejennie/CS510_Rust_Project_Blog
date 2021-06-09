@@ -27,7 +27,7 @@ pub enum Msg {
 }
 
 impl Navigation {
-    fn change_route(&self, route: Routes) -> Callback<ClickEvent> {
+    fn change_route(&self, route: Routes) -> Callback<MouseEvent> {
         self.link.callback(move |_| {
             let route = route.clone();
             Msg::ChangeRoute(route)
@@ -52,6 +52,13 @@ impl Component for Navigation {
             route,
             link,
         }
+    }
+
+    fn change(&mut self, _props: Self::Properties) -> ShouldRender {
+        // Should only return "true" if new properties are different to
+        // previously received properties.
+        // This component has no properties so we will always return "false".
+        false
     }
 
     fn update(&mut self, msg: <Self as yew::html::Component>::Message) -> ShouldRender {
