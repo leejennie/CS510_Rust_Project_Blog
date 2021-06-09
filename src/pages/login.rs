@@ -25,6 +25,7 @@ impl Component for Login {
         html! {
             <div class="loginpage"> 
                 <div class = "login container"> 
+                {"login"}
                 </div>
             </div>
         }
