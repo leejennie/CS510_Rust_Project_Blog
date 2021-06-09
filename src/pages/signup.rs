@@ -23,9 +23,8 @@ impl Component for Signup {
 
     fn view(&self) -> Html {
         html! {
-            <div class="contact">
-                <h2 class="heading">{"Contact Me!"}</h2>
-                <h3 class = "abc">{"hello"}</h3>
+            <div class="signup">
+                <h2> { "Signup page"} </h2>
             </div>
         }
     }

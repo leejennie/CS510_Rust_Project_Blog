@@ -88,18 +88,18 @@ impl Component for Navigation {
                 <nav class="nav-container">
                     <p class="header">{"Recipe Blog"}</p>
                     <ul class="nav flex-column">
-                        <li class="nav-item px-3">
+                        <li class="nav-item px-5">
                             <a class="nav-link active" onclick=&self.change_route(Routes::DashboardRoute)>
                                 {"Home"}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick=&self.change_route(Routes::LoginRoute) >
+                            <a class="nav-link" onclick=&self.change_route(Routes::LoginRoute)>
                                 {"Login"}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick=&self.change_route(Routes::SignupRoute) >
+                            <a class="nav-link" onclick=&self.change_route(Routes::SignupRoute)>
                                 {"Signup"}
                             </a>
                         </li>

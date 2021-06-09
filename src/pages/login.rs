@@ -23,10 +23,7 @@ impl Component for Login {
 
     fn view(&self) -> Html {
         html! {
-            <div class="contact">
-                <h2 class="heading">{"Contact Me!"}</h2>
-                <a href="mailto:ahmad2smile@protonmail.com">{"ahmad2smile@protonmail.com"}</a>
-            </div>
+            <h1> { "Login Page" } </h1>   
         }
     }
 }
