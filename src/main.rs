@@ -1,7 +1,7 @@
 #![recursion_limit = "1024"]
 
-use yew::{html, Component, ComponentLink, Html}; 
 use yew::*;
+use yew::{html, Component, ComponentLink, Html};
 
 pub mod pages;
 

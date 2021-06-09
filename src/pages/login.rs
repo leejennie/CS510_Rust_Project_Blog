@@ -23,8 +23,8 @@ impl Component for Login {
 
     fn view(&self) -> Html {
         html! {
-            <div class="loginpage"> 
-                <div class = "logincontainer"> 
+            <div class="loginpage">
+                <div class = "logincontainer">
                     <div class="row">
                         <div class="col-md-6 offset-md-3 col-xs-12">
                             <h1 class="text-xs-center">{ "Sign In" }</h1>
@@ -49,12 +49,12 @@ impl Component for Login {
                                         type="submit"
                                         disabled=false>
                                         { "Sign in" }
-                                    </button>
+                                </button>
                                 <p class="text-s-center">
-                                    { "Need an account?" }        
+                                    { "Need an account?" }
                                 </p>
                                 <p class="text-s-center">
-                                    { "Forgot password?" }        
+                                    { "Forgot password?" }
                                 </p>
                         </div>
                     </div>

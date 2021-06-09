@@ -23,9 +23,61 @@ impl Component for Signup {
 
     fn view(&self) -> Html {
         html! {
-            <div class="signup">
-                <h2> { "Signup page"} </h2>
+            <div class="signuppage">
+            <div class="signupcontainer">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 col-xs-10">
+                        <h1 class="text-xs-center">{ "Sign Up" }</h1>
+                            <fieldset>
+                                <fieldset class="form-group">
+                                    <input
+                                    class="form-control form-control-lg"
+                                    type="text"
+                                    placeholder="Name"
+                                    />
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <input
+                                        class="form-control form-control-lg"
+                                        type="text"
+                                        placeholder="Username"
+                                    />
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <input
+                                        class="form-control form-control-lg"
+                                        type="email"
+                                        placeholder="Email"
+                                    />
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <input
+                                        class="form-control form-control-lg"
+                                        type="password"
+                                        placeholder="Password"
+                                    />
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <input
+                                        class="form-control form-control-lg"
+                                        type="password"
+                                        placeholder="Confirm Password"
+                                    />
+                                </fieldset>
+                                <button
+                                    class="btn btn-lg btn-primary pull-xs-right"
+                                    type="submit"
+                                    disabled=false>
+                                    { "Sign up" }
+                                </button>
+                                <p class="text-xs-center">
+                                    { "Have an account?" }
+                                </p>
+                            </fieldset>
+                    </div>
+                </div>
             </div>
+        </div>
         }
     }
 }

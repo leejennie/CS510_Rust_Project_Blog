@@ -1,9 +1,7 @@
 use yew::prelude::*;
 use yew_router::{route::Route, service::RouteService, Switch};
 
-use crate::pages::{
-    login::Login, signup::Signup, dashboard::Dashboard,
-};
+use crate::pages::{dashboard::Dashboard, login::Login, signup::Signup};
 
 #[derive(Switch, Clone, Debug)]
 pub enum Routes {
