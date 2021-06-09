@@ -23,7 +23,10 @@ impl Component for Login {
 
     fn view(&self) -> Html {
         html! {
-            <h1> { "Login Page" } </h1>   
+            <div class="loginpage"> 
+                <div class = "login container"> 
+                </div>
+            </div>
         }
     }
 }
