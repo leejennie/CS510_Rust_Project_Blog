@@ -4,14 +4,14 @@
 
 use yew::prelude::*;
 
-pub struct Dashboard {}
+pub struct Recipes {}
 
-impl Component for Dashboard {
+impl Component for Recipes {
     type Message = ();
     type Properties = ();
 
     fn create(_props: Self::Properties, _link: ComponentLink<Self>) -> Self {
-        Dashboard {}
+        Recipes {}
     }
 
     fn update(&mut self, _msg: Self::Message) -> ShouldRender {
@@ -27,11 +27,19 @@ impl Component for Dashboard {
 
     fn view(&self) -> Html {
         html! {
-            <div class="dashboard">
-                <div class="main">{"WELCOME TO THE BEST RECIPE BLOG"}</div>
-                <div class="quote">
-                { "A place where you will find the recipe you need for that delicious meal you want"}
-                </div>
+            <div class = "recipe">
+                <li class = "todo">
+                    { "Need drop down menu with different types of recipes" }
+                </li>
+                <li class = "todo">
+                    { "Need to add images" }
+                </li>
+                <li class = "todo">
+                    { "Need ingredients section" }
+                </li>
+                <li class = "todo">
+                    { "Need recipe section" }
+                </li>
             </div>
         }
     }

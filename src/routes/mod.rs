@@ -1,15 +1,15 @@
 // This code was based on and modified from https://github.com/ahmad2smile/portfolio. The author had a simple way of setting
 // up routes that I really liked and a simple route was just needed for this project. The overall routing system was
-// used from Yew Router which has code similar to this code. 
+// used from Yew Router which has code similar to this code.
 
-// The overall code skeleton was taken from the Yew documentation site and Trunk was used to run it. Refer to this page 
-// to see the intial set up https://yew.rs/docs/getting-started/build-a-sample-app. Running Trunk to build and deploy 
-// created the dist directory and the addition files within that directory used to run the program. 
+// The overall code skeleton was taken from the Yew documentation site and Trunk was used to run it. Refer to this page
+// to see the intial set up https://yew.rs/docs/getting-started/build-a-sample-app. Running Trunk to build and deploy
+// created the dist directory and the addition files within that directory used to run the program.
 
 use yew::prelude::*;
 use yew_router::{route::Route, service::RouteService, Switch};
 
-use crate::pages::{dashboard::Dashboard, login::Login, signup::Signup};
+use crate::pages::{dashboard::Dashboard, login::Login, recipes::Recipes, signup::Signup};
 
 #[derive(Switch, Clone, Debug)]
 pub enum Routes {
@@ -19,6 +19,8 @@ pub enum Routes {
     SignupRoute,
     #[to = "/"]
     DashboardRoute,
+    #[to = "/#recipes"]
+    RecipesRoute,
 }
 
 pub struct Navigation {
@@ -73,6 +75,7 @@ impl Component for Navigation {
                 let route_string = match route {
                     Routes::LoginRoute => format!("/#login"),
                     Routes::SignupRoute => format!("/#signup"),
+                    Routes::RecipesRoute => format!("/#recipes"),
                     Routes::DashboardRoute => format!("/"),
                 };
 
@@ -100,6 +103,11 @@ impl Component for Navigation {
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" onclick=&self.change_route(Routes::RecipesRoute)>
+                                {"Recipes"}
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" onclick=&self.change_route(Routes::LoginRoute)>
                                 {"Login"}
                             </a>
@@ -117,6 +125,7 @@ impl Component for Navigation {
                             Some(Routes::LoginRoute) => html!{<Login />},
                             Some(Routes::SignupRoute) => html!{<Signup />},
                             Some(Routes::DashboardRoute) => html!{<Dashboard />},
+                            Some(Routes::RecipesRoute) => html!{<Recipes />},
                             None => html!{ <div>{"Route Not Found! 404"}</div> }
                         }
                     }
