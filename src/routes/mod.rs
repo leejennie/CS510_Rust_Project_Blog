@@ -17,10 +17,10 @@ pub enum Routes {
     LoginRoute,
     #[to = "/#signup"]
     SignupRoute,
-    #[to = "/"]
-    DashboardRoute,
     #[to = "/#recipes"]
     RecipesRoute,
+    #[to = "/"]
+    DashboardRoute,
 }
 
 pub struct Navigation {
@@ -124,8 +124,8 @@ impl Component for Navigation {
                         match Routes::switch(self.route.clone()) {
                             Some(Routes::LoginRoute) => html!{<Login />},
                             Some(Routes::SignupRoute) => html!{<Signup />},
-                            Some(Routes::DashboardRoute) => html!{<Dashboard />},
                             Some(Routes::RecipesRoute) => html!{<Recipes />},
+                            Some(Routes::DashboardRoute) => html!{<Dashboard />},
                             None => html!{ <div>{"Route Not Found! 404"}</div> }
                         }
                     }
