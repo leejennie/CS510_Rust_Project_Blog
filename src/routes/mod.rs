@@ -1,3 +1,11 @@
+// This code was based on and modified from https://github.com/ahmad2smile/portfolio. The author had a simple way of setting
+// up routes that I really liked and a simple route was just needed for this project. The overall routing system was
+// used from Yew Router which has code similar to this code. 
+
+// The overall code skeleton was taken from the Yew documentation site and Trunk was used to run it. Refer to this page 
+// to see the intial set up https://yew.rs/docs/getting-started/build-a-sample-app. Running Trunk to build and deploy 
+// created the dist directory and the addition files within that directory used to run the program. 
+
 use yew::prelude::*;
 use yew_router::{route::Route, service::RouteService, Switch};
 
