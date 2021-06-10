@@ -33,6 +33,10 @@ After running trunk serve, it should compile and work, popping up a link that lo
 
 That will deploy the site locally.
 
+Shut down: 
+
+    ctrl-C 
+
 Given the time and finally getting the code working, I did not have time to write test code that specifically test what I wrote, such as routing errors. I did not have time to implement the backend portion, so testing for that would include making sure that fields in the login and sign in pages are filled in correctly, etc. However, trunk itself has some test code that are included when building and running the program and that looks like it passed those tests since no errors were thrown.
 
 An example illustrating the operation of my code is that say we start running the program. Initally, the homepage should be the first thing seen with the welcome message. Then, by clicking on the tabs in the navigation bar, the routing works to switch the pages from one to another.
